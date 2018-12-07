@@ -205,7 +205,7 @@ d3.csv("./assets/data/data.csv").then(function(censusData) {
         .classed("stateCircle", true)
         .attr("cx", d => xLinearScale(d[chosenXAxis]))
         .attr("cy", d => yLinearScale(d[chosenYAxis]))
-        .attr("r", 20)
+        .attr("r", 12)
         .attr("opacity", ".5");
 
     //append initial text
@@ -216,8 +216,8 @@ d3.csv("./assets/data/data.csv").then(function(censusData) {
         .classed("stateText", true)
         .attr("x", d => xLinearScale(d[chosenXAxis]))
         .attr("y", d => yLinearScale(d[chosenYAxis]))
-        .attr("dy", 5)
-        .attr("font-size", "15px")
+        .attr("dy", 3)
+        .attr("font-size", "10px")
         .text(function(d){return d.abbr});
 
     //create group for 3 x-axis labels
